@@ -1314,3 +1314,469 @@ footer {
     .team-grid { grid-template-columns: 1fr; }
     .team-img { width: 150px; height: 150px; }
 }
+/* ============================================
+   ISB Training Camp Section
+   ============================================ */
+
+.isb-section {
+    background: linear-gradient(135deg, #fefce8 0%, #fdf2f8 100%);
+    padding: 80px 0;
+}
+
+/* Intro Card */
+.isb-intro {
+    margin-bottom: 50px;
+}
+
+.isb-intro-card {
+    background: linear-gradient(135deg, #fbbf24, #db2777);
+    padding: 40px;
+    border-radius: 32px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.isb-intro-card i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.isb-intro-card strong {
+    color: #1f2937;
+}
+
+/* What is ISB */
+.isb-what {
+    background: white;
+    padding: 40px;
+    border-radius: 32px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.isb-what h3 {
+    font-size: 28px;
+    color: #db2777;
+    margin-bottom: 15px;
+}
+
+.isb-what h3 i {
+    margin-left: 10px;
+    color: #fbbf24;
+}
+
+.isb-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #1f2937;
+}
+
+.isb-definition-box {
+    background: #fef3c7;
+    padding: 30px;
+    border-radius: 24px;
+    border-right: 5px solid #db2777;
+}
+
+.definition-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #db2777;
+    margin-bottom: 15px;
+}
+
+.isb-definition-box p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #4b5563;
+}
+
+/* Objectives */
+.isb-objectives {
+    margin-bottom: 50px;
+}
+
+.isb-objectives h3,
+.isb-benefits h3,
+.isb-program-details h3,
+.isb-definition h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.isb-objectives h3 i,
+.isb-benefits h3 i,
+.isb-program-details h3 i,
+.isb-definition h3 i {
+    color: #fbbf24;
+    margin-left: 10px;
+}
+
+.focus-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #db2777;
+    margin-bottom: 30px;
+}
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.objective-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.objective-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.objective-number {
+    font-size: 24px;
+    background: linear-gradient(135deg, #fbbf24, #db2777);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.objective-card p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.objective-card strong {
+    color: #db2777;
+}
+
+/* Benefits */
+.isb-benefits {
+    margin-bottom: 50px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+}
+
+.benefit-item {
+    background: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.benefit-item:hover {
+    background: linear-gradient(135deg, #fbbf24, #db2777);
+    color: white;
+    transform: translateX(-5px);
+}
+
+.benefit-num {
+    background: #fbbf24;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #1f2937;
+}
+
+.benefit-item:hover .benefit-num {
+    background: white;
+}
+
+/* Psychological Box */
+.isb-psychological {
+    margin-bottom: 50px;
+}
+
+.psychological-box {
+    background: linear-gradient(135deg, #fef3c7, #fce7f3);
+    padding: 40px;
+    border-radius: 32px;
+    text-align: center;
+    border: 2px solid #fbbf24;
+}
+
+.psychological-box i {
+    font-size: 48px;
+    color: #db2777;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.psychological-box p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #1f2937;
+}
+
+.psychological-box strong {
+    color: #db2777;
+}
+
+/* Program Details */
+.isb-program-details {
+    background: white;
+    padding: 40px;
+    border-radius: 32px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.isb-program-details p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #4b5563;
+    font-size: 17px;
+}
+
+.program-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.pf-item {
+    background: #fef3c7;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.pf-item i {
+    color: #db2777;
+    font-size: 18px;
+}
+
+.highlight-quote {
+    background: linear-gradient(135deg, #fef3c7, #fdf2f8);
+    padding: 30px;
+    border-radius: 24px;
+    text-align: center;
+    border-right: 4px solid #fbbf24;
+}
+
+.highlight-quote i {
+    font-size: 35px;
+    color: #fbbf24;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.highlight-quote p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Definition Card */
+.isb-definition {
+    margin-bottom: 40px;
+}
+
+.definition-card {
+    background: white;
+    padding: 40px;
+    border-radius: 32px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.definition-card p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #4b5563;
+    font-size: 17px;
+}
+
+.conclusion {
+    background: linear-gradient(135deg, #fbbf24, #db2777);
+    color: white !important;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0 !important;
+}
+
+/* CTA Button */
+.isb-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .isb-section {
+        padding: 50px 0;
+    }
+    
+    .isb-intro-card {
+        font-size: 16px;
+        padding: 25px;
+    }
+    
+    .isb-what h3,
+    .isb-objectives h3,
+    .isb-benefits h3,
+    .isb-program-details h3,
+    .isb-definition h3 {
+        font-size: 22px;
+    }
+    
+    .definition-title {
+        font-size: 18px;
+    }
+    
+    .objectives-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .program-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .psychological-box p {
+        font-size: 16px;
+    }
+    
+    .isb-what,
+    .isb-program-details,
+    .definition-card {
+        padding: 25px;
+    }
+    
+    .benefit-item {
+        border-radius: 16px;
+    }
+}
+        /* Page specific styles */
+        .isb-page-header {
+            background: linear-gradient(135deg, #fef3c7, #fdf2f8);
+            padding: 140px 0 60px;
+            text-align: center;
+            margin-top: 70px;
+        }
+        
+        .isb-page-header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fbbf24, #db2777);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 16px;
+        }
+        
+        .isb-page-header p {
+            color: #6b7280;
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #db2777, #be185d);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .back-to-home:hover {
+            transform: translateX(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .isb-page-header h1 {
+                font-size: 32px;
+            }
+        }
+/* Popular Rank Badge */
+.rank-card.popular {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--gold);
+    transform: scale(1.02);
+}
+
+.rank-card.popular:hover {
+    transform: scale(1.02) translateY(-8px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: 15px;
+    left: -30px;
+    background: linear-gradient(135deg, #fbbf24, #db2777);
+    color: white;
+    padding: 6px 40px;
+    font-size: 12px;
+    font-weight: 700;
+    transform: rotate(-45deg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .popular-badge {
+        font-size: 10px;
+        padding: 4px 35px;
+        top: 12px;
+        left: -35px;
+    }
+    
+    .rank-card.popular {
+        transform: scale(1);
+    }
+    
+    .rank-card.popular:hover {
+        transform: translateY(-8px);
+    }
+}
