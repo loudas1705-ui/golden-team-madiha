@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم | الفريق الذهبي</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>الفريق الذهبي</h1>
+                <p>Golden Team Company by Madiha</p>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="index.html#services">خدماتنا</a></li>
+                <li><a href="isb-program.html">المعسكر التدريبي</a></li>
+                <li><a href="index.html#ranks">الرتب</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="index.html#contact">اتصل بنا</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-page-header">
+        <div class="container">
+            <h1>🔐 لوحة التحكم</h1>
+            <p>إدارة المقالات ومعرض الصور بكل سهولة</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Storage Warning -->
+        <div class="storage-warning" id="storageWarning">
+            <p><i class="fas fa-exclamation-triangle"></i> مساحة التخزين محدودة. يرجى استخدام صور بحجم أقل من 500KB للحصول على أفضل أداء.</p>
+        </div>
+        
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-newspaper"></i>
+                <div class="number" id="blogCount">0</div>
+                <div class="label">المقالات المنشورة</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-images"></i>
+                <div class="number" id="galleryCount">0</div>
+                <div class="label">الصور في المعرض</div>
+            </div>
+        </div>
+        
+        <!-- Tabs -->
+        <div style="text-align: center;">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="blog">📝 إدارة المقالات</button>
+                <button class="tab-btn" data-tab="gallery">🖼️ إدارة المعرض</button>
+                <button class="tab-btn" data-tab="settings">⚙️ الإعدادات</button>
+            </div>
+        </div>
+        
+        <!-- Blog Management Panel -->
+        <div class="panel active" id="blogPanel">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <span class="section-divider">➕ إضافة مقال جديد</span>
+            </div>
+            
+            <form id="blogForm">
+                <div class="form-group">
+                    <label><i class="fas fa-heading"></i> عنوان المقال <span style="color: #ef4444;">*</span></label>
+                    <input type="text" id="blogTitle" required placeholder="مثال: كيفية بناء فريق ناجح">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> اسم الكاتب <span style="color: #ef4444;">*</span></label>
+                    <input type="text" id="blogAuthor" required placeholder="مديحة زغيب">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-file-alt"></i> محتوى المقال <span style="color: #ef4444;">*</span></label>
+                    <textarea id="blogContent" required placeholder="اكتب محتوى المقال هنا..."></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-pen-fancy"></i> نشر المقال
+                    </button>
+                </div>
+            </form>
+            
+            <div style="text-align: center; margin: 50px 0 30px;">
+                <span class="section-divider">📋 قائمة المقالات</span>
+            </div>
+            
+            <div class="items-list">
+                <div class="items-header">
+                    <span>العنوان</span>
+                    <span>الكاتب</span>
+                    <span>الإجراءات</span>
+                </div>
+                <div id="blogsList"></div>
+            </div>
+        </div>
+        
+        <!-- Gallery Management Panel -->
+        <div class="panel" id="galleryPanel">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <span class="section-divider">📸 إضافة صورة جديدة</span>
+            </div>
+            
+            <form id="galleryForm">
+                <div class="form-group">
+                    <label><i class="fas fa-tag"></i> وصف الصورة</label>
+                    <input type="text" id="galleryCaption" placeholder="أضف وصفاً للصورة">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-cloud-upload-alt"></i> الصورة <span style="color: #ef4444;">*</span></label>
+                    <input type="file" id="galleryImage" accept="image/*" required>
+                    <div class="image-preview" id="galleryImagePreview"></div>
+                    <small style="color: #6b7280;">✅ يفضل استخدام صور بحجم أقل من 500KB للحصول على أفضل أداء</small>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn-primary" id="uploadBtn">
+                        <i class="fas fa-upload"></i> رفع الصورة
+                    </button>
+                </div>
+            </form>
+            
+            <div style="text-align: center; margin: 50px 0 30px;">
+                <span class="section-divider">🖼️ معرض الصور</span>
+            </div>
+            
+            <div id="galleryList" class="admin-gallery-grid"></div>
+        </div>
+        
+        <!-- Settings Panel -->
+        <div class="panel" id="settingsPanel">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <span class="section-divider">⚙️ إعدادات النظام</span>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-database"></i> إدارة البيانات</label>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <button type="button" class="btn-danger" onclick="clearAllData()">
+                        <i class="fas fa-trash-alt"></i> حذف جميع البيانات
+                    </button>
+                    <button type="button" class="btn-secondary" onclick="exportData()">
+                        <i class="fas fa-download"></i> تصدير نسخة احتياطية
+                    </button>
+                    <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importData(this)">
+                    <button type="button" class="btn-secondary" onclick="document.getElementById('importFile').click()">
+                        <i class="fas fa-upload"></i> استيراد بيانات
+                    </button>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-chart-simple"></i> استخدام التخزين</label>
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 12px;">
+                    <p><i class="fas fa-hdd"></i> المساحة المستخدمة: <strong id="storageUsed">0</strong> / ~5MB</p>
+                    <div style="background: #e5e7eb; border-radius: 10px; margin-top: 10px; overflow: hidden;">
+                        <div id="storageBar" style="width: 0%; height: 8px; background: linear-gradient(135deg, #fbbf24, #db2777); border-radius: 10px;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-info-circle"></i> معلومات التخزين</label>
+                <div style="background: #fef3c7; padding: 20px; border-radius: 20px;">
+                    <p><i class="fas fa-check-circle" style="color: #10b981;"></i> يتم حفظ جميع البيانات في متصفحك (localStorage)</p>
+                    <p><i class="fas fa-check-circle" style="color: #10b981; margin-top: 10px;"></i> البيانات تبقى موجودة حتى تقوم بحذفها يدوياً</p>
+                    <p><i class="fas fa-check-circle" style="color: #10b981; margin-top: 10px;"></i> يعمل بشكل كامل على GitHub Pages</p>
+                    <p><i class="fas fa-check-circle" style="color: #10b981; margin-top: 10px;"></i> يمكنك تصدير البيانات للاحتفاظ بنسخة احتياطية</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="blog.html" target="_blank" class="btn-primary" style="text-decoration: none;">
+                    <i class="fas fa-external-link-alt"></i> زيارة المدونة
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>الفريق الذهبي</h4>
+                    <p>شركة جزائرية رائدة في التسويق والاستثمار منذ 2016.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="blog.html">المدونة</a></li>
+                        <li><a href="admin.html">لوحة التحكم</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>معلومات الاتصال</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> باتنة، الجزائر</li>
+                        <li><i class="fas fa-phone"></i>  +213 0551651532</li>
+                        <li><i class="fas fa-phone"></i>  +213 0657151225</li>
+                        <li><i class="fas fa-envelope"></i> zeghibmadiha5@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تابعنا</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/people/Manager-Madiha/100076258599726/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/dragon54985"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@zeghibnour1443"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LASCorp - جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeEditModal()">&times;</span>
+            <h3 style="text-align: center;">✏️ تعديل المقال</h3>
+            <form id="editForm">
+                <input type="hidden" id="editId">
+                <div class="form-group">
+                    <label>العنوان</label>
+                    <input type="text" id="editTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>الكاتب</label>
+                    <input type="text" id="editAuthor" required>
+                </div>
+                <div class="form-group">
+                    <label>المحتوى</label>
+                    <textarea id="editContent" required rows="6"></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn-primary">💾 حفظ التعديلات</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
