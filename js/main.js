@@ -1,4 +1,4 @@
-// js/main.js - Frontend JavaScript with Supabase
+// js/main.js - Frontend JavaScript 
 
 // Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobileMenu');
