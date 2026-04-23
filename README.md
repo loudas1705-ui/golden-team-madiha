@@ -18,7 +18,6 @@ This is the official website for Golden Team Company by Madiha, built with moder
 
 ### Prerequisites
 - Modern web browser
-- Local web server (optional but recommended)
 
 
 ### Direct File Access
@@ -31,7 +30,7 @@ You can also open `index.html` directly in your browser, but some features may n
 - **JavaScript ES6+**: Interactive functionality and dynamic content
 - **Font Awesome**: Icon library for UI elements
 - **Google Fonts**: Cairo font family for Arabic typography
-- **TailwindCSS**: Utility-first CSS framework (if used)
+- **TailwindCSS**: Utility-first CSS framework
 
 ## 📱 Pages Overview
 
