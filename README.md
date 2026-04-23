@@ -20,9 +20,6 @@ This is the official website for Golden Team Company by Madiha, built with moder
 - Modern web browser
 
 
-### Direct File Access
-You can also open `index.html` directly in your browser, but some features may not work properly due to CORS restrictions.
-
 ## 🎨 Technologies Used
 
 - **HTML5**: Semantic markup and modern HTML features
